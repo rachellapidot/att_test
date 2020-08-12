@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Anatol",
+        "last": "Stevens"
+      },
+      "location": {
+        "street": {
+          "number": 9723,
+          "name": "Lindenstraße"
+        },
+        "city": "Potsdam-Mittelmark",
+        "state": "Nordrhein-Westfalen",
+        "country": "Germany",
+        "postcode": 99159,
+        "coordinates": {
+          "latitude": "-38.3935",
+          "longitude": "-104.3134"
+        },
+        "timezone": {
+          "offset": "+2:00",
+          "description": "Kaliningrad, South Africa"
+        }
+      },
+      "email": "anatol.stevens@example.com",
+      "login": {
+        "uuid": "0d8f9b9f-dd22-46f5-b714-bffd3de9b26c",
+        "username": "beautifulelephant725",
+        "password": "jayhawk",
+        "salt": "22jjz8u8",
+        "md5": "1f1709f5c56806f4abdd9feeb2bca88d",
+        "sha1": "7d70fb7dec80326da66456313cda2ca8c2cee83c",
+        "sha256": "0530887ad01c6905e34312ab8611d81190dfca038e70e3be8d0793987755a553"
+      },
+      "dob": {
+        "date": "1998-06-04T23:10:08.290Z",
+        "age": 22
+      },
+      "registered": {
+        "date": "2019-04-15T01:28:31.920Z",
+        "age": 1
+      },
+      "phone": "0289-6714730",
+      "cell": "0178-0844539",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/85.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/85.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/85.jpg"
+      },
+      "nat": "DE"
+    }
+  ],
+  "info": {
+    "seed": "65ac17f3d0865c14",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+}
