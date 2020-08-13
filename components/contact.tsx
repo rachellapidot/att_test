@@ -1,9 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, View, Image} from 'react-native';
+import {
+  ActivityIndicator,
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
 const mockCont = require('./contactMockData.json');
 
-const Contact: React.FC<{}> = () => {
+const Contact: React.FC<{
+  onPress: (contactDetails: any) => void;
+}> = ({onPress}) => {
   const [isLoading, setLoading] = useState(true);
   const [contact, setContact] = useState<any>();
 
@@ -22,15 +30,29 @@ const Contact: React.FC<{}> = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  console.warn(contact?.picture);
-
   return isLoading || !contact ? (
     <View>
       <ActivityIndicator />
     </View>
   ) : (
-    <View style={{flex: 1, padding: 24}}>
-      <Image source={{uri: contact.picture.large}} />
+    <View
+      style={{
+        flex: 1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#d5d5d6',
+        margin: 10,
+        padding: 10,
+      }}>
+      <TouchableOpacity onPress={() => onPress(contact)}>
+        <Image
+          style={{marginBottom: 5, width: 100, height: 100}}
+          source={require('./images/mockImage.jpg')}
+        />
+        <Text>{contact.name.first + ' ' + contact.name.last}</Text>
+        {/* <Image source={{uri: contact.picture.medium}} /> */}
+      </TouchableOpacity>
     </View>
   );
 };
