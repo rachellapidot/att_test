@@ -40,11 +40,11 @@ const Contact: React.FC<{
   ) : (
     <View style={styles.wrapper}>
       <TouchableOpacity onPress={() => onPress(contact)}>
-        <Image
+        {/* <Image
           style={styles.image}
           source={require('./images/mockImage.jpg')}
-        />
-        {/* <Image style={styles.image} source={{uri: contact.picture.medium}} /> */}
+        /> // for offline */}
+        <Image style={styles.image} source={{uri: contact.picture.medium}} />
         <Text>{contact.name.first + ' ' + contact.name.last}</Text>
       </TouchableOpacity>
     </View>

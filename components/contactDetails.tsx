@@ -6,8 +6,8 @@ const ContactDetails = ({route}) => {
   const contact: ContactIntreface = route.params.contact;
   return contact ? (
     <View key={contact.email} style={styles.wrapper}>
-      <Image style={styles.image} source={require('./images/mockLarge.jpg')} />
-      {/* <Image style={styles.image} source={{uri: contact.picture.large}} /> */}
+      {/* <Image style={styles.image} source={require('./images/mockLarge.jpg')} /> // for offline  */}
+      <Image style={styles.image} source={{uri: contact.picture.large}} />
       <Text style={styles.text}>
         {contact.name.first + ' ' + contact.name.last}
       </Text>
