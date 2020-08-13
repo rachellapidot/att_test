@@ -1,10 +1,11 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
+import {ContactIntreface} from './contactInterface';
 
 const ContactDetails = ({route}) => {
-  const {contact} = route.params;
+  const contact: ContactIntreface = route.params.contact;
   return contact ? (
-    <View style={{display: 'flex', alignItems: 'center', paddingTop: 25}}>
+    <View key={contact.email} style={styles.wrapper}>
       <Image style={styles.image} source={require('./images/mockLarge.jpg')} />
       {/* <Image style={styles.image} source={{uri: contact.picture.large}} /> */}
       <Text style={styles.text}>
@@ -30,6 +31,11 @@ const ContactDetails = ({route}) => {
   );
 };
 const styles = StyleSheet.create({
+  wrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: 25,
+  },
   image: {
     marginBottom: 5,
   },
